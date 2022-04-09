@@ -21,8 +21,11 @@ jobs:
       - name: Downgrade MarkupSafe
         run: pip3 install MarkupSafe==2.0.0 --force-reinstall
       
-      - name: Convert ipynb to markdown
+      - name: Convert ipynb to markdown of root
         run: jupyter nbconvert *.ipynb --to markdown
+      
+      - name: Convert ipynb to markdown of subfolders
+        run: jupyter nbconvert **/*.ipynb --to markdown
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
