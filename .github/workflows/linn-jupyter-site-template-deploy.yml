@@ -23,9 +23,19 @@ jobs:
       
       - name: Convert ipynb to markdown of root
         run: jupyter nbconvert *.ipynb --to markdown
+        # it would throw an error if no files are matched, but that's ok
+        continue-on-error: true
+      
+      - name: Ignore Error
+        run: true
       
       - name: Convert ipynb to markdown of subfolders
         run: jupyter nbconvert **/*.ipynb --to markdown
+        # it would throw an error if no files are matched, but that's ok
+        continue-on-error: true
+      
+      - name: Ignore Error
+        run: true
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
