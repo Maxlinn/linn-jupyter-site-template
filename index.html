@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- !!! Default title of your site -->
+  <title>Maxlinn's Docsify Template Demo</title>
+  <!-- !!! Favicon, aka the icon of your site. Hereby is a svg of "gift" from icomoon.io. -->
+  <link rel="icon" href="favicon.svg">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- Additional stylesheet, coordinate with dark mode plugin, remove if you like vanilla look -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      // !!! Your site name on the top-left sidebar corner
+      name: 'linn-docsify-template',
+      // !!! Your site url of the top-right github icon
+      repo: 'https://github.com/Maxlinn/linn-docsify-template',
+      // OK, that's all, enjoy!
+      // Change followings if you what you are doing.
+
+      loadNavbar: true,
+      loadSidebar: true,
+      loadFooter: true,
+      mergeNavbar: true, // navbar will be merged with the sidebar on smaller screens
+      subMaxLevel: 3, // sidebar item to show current page headings
+      sidebarDisplayLevel: 1, // nested sidebar collapse plugin
+      // notFoundPage: true, // _404.md will be display if url doesn't exist
+
+      darklightTheme: {
+        defaultTheme: 'light | dark',
+        // font of site and code blocks
+        // siteFont: '"Times New Roman","Noto Serif CJK SC","Songti SC","Microsoft YaHei UI",serif,-apple-system,BlinkMacSystemFont',
+        // codeFontFamily: 'Source Code Pro,Menlo,Consolas,Monaco,monospace,"Times New Roman","Noto Serif CJK SC","Songti SC","Microsoft YaHei UI",serif,-apple-system,BlinkMacSystemFont',
+      },
+
+      search: {
+        maxAge: 86400000, // ttl of index file in localstorage, one day on default
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        depth: 2
+      },
+
+      timeUpdater: {
+        text: '>Last Updated At: {docsify-updated}', // Prompt of updated date message, will show on every page
+        formatUpdated: '{YYYY}/{MM}/{DD}',
+      },
+
+      pagination: {
+        previousText: 'Prev Page',
+        nextText: 'Next Page',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+
+  <!-- Search, Copy Code, Image Zoom, Footer, Last Updated Date, Dark Mode, Prev/Next Page-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-updated@1/src/time-updater.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <!-- LaTeX, Code Highlight, Mermaid Graph -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+
+  <!-- Add Space to Chinese and English overlap, remove if you don't like it much. -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+
+  <!-- Allow to collapse nested sidebar levels, corresponding to 'sidebarDisplayLevel' key in config -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+
+  <!-- Allow tabs-like contents, format: html comments of "tabs:start" and "tabs:end" -->
+  <!-- See also: https://jhildenbiddle.github.io/docsify-tabs/#/?id=usage -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+  <!-- Other optional plugins -->
+  <!-- https://github.com/mrpotatoes/docsify-toc -->
+  <!-- https://github.com/HerbertHe/docsify-beian -->
+  <!-- https://github.com/markbattistella/docsify-sidebarFooter -->
+  <!-- https://github.com/waruqi/docsify-plugin-carbon, advertisments-->
+
+  <!-- Did not function properly -->
+  <!-- https://github.com/njleonzhang/docsify-edit-on-github -->
+  <!-- https://docsify.js.org/#/plugins?id=gitalk -->
+</body>
+
+</html>

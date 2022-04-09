@@ -1,0 +1,4 @@
+- [Homepage](README.md "HTML title by default is the text in []")
+- [Item of a-great-subfolder](a-great-subfolder/README.md "HTML title can be setted here")
+    - click arrows to collapse items!
+    - [Sidebar item can by any link, like this](https://github.com)
