@@ -18,7 +18,8 @@ Demo is here: [Maxlinn's Jupyter Site Template Demo](https://maxlinn.github.io/l
 
 ## Usage
 
-- Use this repository as template with **all-branches**.
+- Click the `Use Template` button to initialize your project.
+  - `fork` is also appropriate. The advantage is that you can easily merge my upcoming updates by click `fetch-upstream` button, the disadvantage is that you can not set a forked public repository to private.
   - `main` branch contains following files
   - To modify:
     - `index.html`, settings, **must modify, at least modify those commented with `!!!`**.
@@ -31,6 +32,7 @@ Demo is here: [Maxlinn's Jupyter Site Template Demo](https://maxlinn.github.io/l
   - Nevermind:
     - `.nojekyll`, nevermind.
 - Go to repository settings, set `github pages` **work on `gh-pages` branch**.
+  - If there is no `gh-pages` branch, push to this repository once to trigger the workflow, it will create `gh-pages` branch.
 - Done!
 
 ## Reminder
