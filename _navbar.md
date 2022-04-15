@@ -1,3 +1,0 @@
-- a-great-navbar-item
-    - [Google](https://google.com)
-    - [Github](https://github.com)
