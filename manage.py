@@ -58,8 +58,8 @@ class FixLocalLinkComponent(IComponent):
                         return f'[{text}][{link}]'
                     # the link is relative of current dir, that is, root
                     target_filename = os.path.join(root, link)
-                    # noneed: ask OS to do the simplification
-                    # target_filename = os.path.realpath(target_filename)
+                    # must: ask OS to do the simplification
+                    target_filename = os.path.realpath(target_filename)
                     # compute the relative path to base dir
                     target_relname = os.path.relpath(
                         target_filename, args.fix_base_dir)
