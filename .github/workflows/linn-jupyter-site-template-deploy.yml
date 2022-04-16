@@ -31,6 +31,9 @@ jobs:
         # it would throw an error if no files are matched, but that's ok
         continue-on-error: true
       
+      - name: Auto generate sidebar
+        run: python3 manage.py --gen-side-bar --gen-sort-by=created
+      
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
