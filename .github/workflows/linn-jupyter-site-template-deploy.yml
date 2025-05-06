@@ -1,40 +1,39 @@
 name: linn-jupyter-site-template-deploy
 on:
   push:
-    branches: # listen on which branch(s)
+    branches:
       - main
 
 jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
-    steps:  
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          # if git submodules were used, uncomment next line
+          # If git submodules were used, uncomment next line
           # submodules: true
 
-      - name: Install nbconvert
+      - name: Install specific notebook version
+        run: pip3 install notebook==6.4.12
+
+      - name: Install nbconvert and nbextensions
         run: pip3 install nbconvert jupyter_contrib_nbextensions
-      
+
       - name: Downgrade MarkupSafe
         run: pip3 install MarkupSafe==2.0.0 --force-reinstall
-      
+
       - name: Convert ipynb to markdown of root
         run: jupyter nbconvert *.ipynb --to markdown
-        # it would throw an error if no files are matched, but that's ok
         continue-on-error: true
-      
+
       - name: Convert ipynb to markdown of subfolders
         run: jupyter nbconvert **/*.ipynb --to markdown
-        # it would throw an error if no files are matched, but that's ok
         continue-on-error: true
-      
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # the branch to deploy on
           branch: gh-pages
           folder: .
-
